@@ -1,0 +1,38 @@
+.hero > img {
+  width: 106%;
+  height: 106%;
+  top: -3%;
+  left: -3%;
+  transform-origin: 62% 46%;
+  animation: hero-glide 16s ease-in-out infinite alternate;
+  will-change: transform;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 45% -12% -10%;
+  pointer-events: none;
+  opacity: 0.12;
+  background: linear-gradient(105deg, transparent 15%, rgba(185, 225, 232, 0.28) 43%, transparent 68%);
+  mix-blend-mode: screen;
+  animation: ocean-light 10s linear infinite;
+}
+
+@keyframes hero-glide {
+  0% { transform: translate3d(-1.2%, 0.7%, 0) scale(1.025) rotate(-0.12deg); }
+  48% { transform: translate3d(0.4%, -0.5%, 0) scale(1.04) rotate(0.08deg); }
+  100% { transform: translate3d(1.2%, 0.25%, 0) scale(1.03) rotate(-0.05deg); }
+}
+
+@keyframes ocean-light {
+  from { transform: translateX(-18%); }
+  to { transform: translateX(18%); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero > img,
+  .hero::after {
+    animation: none;
+  }
+}

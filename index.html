@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="The Albatross Atlas—an independent guide to all 22 living albatross species.">
+  <meta name="theme-color" content="#082632">
+  <title>The Albatross Atlas — Every Living Species</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700&family=Newsreader:opsz,wght@6..72,400;6..72,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="atlas.css">
+  <link rel="stylesheet" href="earth.css">
+  <link rel="stylesheet" href="satellite.css">
+  <link rel="stylesheet" href="hero-motion.css">
+  <link rel="stylesheet" href="contrast.css?v=2">
+  <script src="atlas.js" defer></script>
+  <script src="earth.js" defer></script>
+  <script src="satellite-interaction.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#species">Skip to all species</a>
+  <header><a class="brand" href="#top"><span>↝</span><b>THE ALBATROSS ATLAS</b></a><nav><a href="#species">All species</a><a href="#ocean-map">Regions</a><a href="#life">Life cycle</a></nav></header>
+  <main>
+    <section class="hero" id="top">
+      <img src="images/albatross/albatross-hero.png" alt="A Wandering Albatross gliding over a stormy ocean">
+      <div class="shade"></div>
+      <div class="hero-copy"><p class="eyebrow">A complete field guide · Diomedeidae</p><h1>Born to<br><em>cross oceans.</em></h1><p>Meet every albatross species—from the storm lanes of the Southern Ocean to the volcanic islands of the North Pacific.</p><a class="button" href="#species">Explore all 22 species <span>↓</span></a></div>
+      <div class="hero-stat"><strong>3.5 m</strong><span>largest wingspan<br>of any living bird</span></div>
+    </section>
+    <div class="ticker"><span>22 LIVING SPECIES ◆ FOUR GENERA ◆ TWO OCEAN HEMISPHERES ◆ MASTERS OF DYNAMIC SOARING ◆</span></div>
+
+    <section class="intro section"><p class="chapter">01 / INTRODUCTION</p><div class="split"><h2>Masters of the<br><em>moving air.</em></h2><div><p class="lead">Albatrosses spend most of their lives beyond sight of land, reading wind and wave with extraordinary precision.</p><p>Their long, narrow wings turn ocean winds into distance through dynamic soaring. Land is mainly for courtship, nesting, and raising a single chick.</p></div></div><div class="stats"><article><strong>50+</strong><span>Years in a long life</span></article><article><strong>1</strong><span>Egg per attempt</span></article><article><strong>4</strong><span>Living genera</span></article><article><strong>22</strong><span>Species profiles</span></article></div></section>
+
+    <section class="species section" id="species"><p class="chapter light">02 / ALL SPECIES</p><div class="heading"><div><p class="eyebrow coral">THE COMPLETE FAMILY</p><h2>Every species.<br><em>Every ocean.</em></h2></div><p>All 22 birds are shown below with adult photographs, scientific names, ranges, wingspans, and identification notes.</p></div><aside><b>WHY 20 OR 22?</b><span>This atlas follows the 22-profile conservation convention, treating Campbell and White-capped Albatrosses separately. Some newer checklists combine them with Black-browed and Shy.</span></aside><nav class="species-index" id="species-index" aria-label="Jump to a species"></nav><div class="portrait-grid" id="portrait-grid"></div><div class="profiles" id="profiles"></div></section>
+
+    <section class="ocean section" id="ocean-map"><p class="chapter">03 / A WORLD OF WIND</p><div class="split"><div><p class="eyebrow blue">GLOBAL RANGE</p><h2>Where the<br><em>wind leads.</em></h2><p class="lead">Most albatross diversity circles the Southern Hemisphere. Three species specialize in the North Pacific, while the Waved Albatross breeds near the equator.</p></div><div class="earth-wrap"><canvas id="bird-earth" aria-label="Interactive Earth showing albatross regions"></canvas><p class="earth-help">Drag to rotate · Scroll to zoom</p><p class="earth-status" id="earth-status">Showing all regions</p><a class="earth-credit" href="https://commons.wikimedia.org/wiki/File:Blue_Marble_Next_Generation_%2B_topography_%2B_bathymetry.jpg">NASA Blue Marble ↗</a></div></div><div class="region-controls"><button data-earth-region="south"><span>01 · 18 PROFILES</span><strong>Southern Hemisphere</strong><small>Great albatrosses · Mollymawks · Sooty albatrosses</small></button><button data-earth-region="north"><span>02 · 3 PROFILES</span><strong>North Pacific</strong><small>Laysan · Black-footed · Short-tailed</small></button><button data-earth-region="equator"><span>03 · 1 PROFILE</span><strong>Equatorial Pacific</strong><small>Waved Albatross · Galápagos</small></button></div></section>
+
+    <section class="life section" id="life"><p class="chapter">04 / A SLOW LIFE</p><p class="eyebrow blue">COURTSHIP TO OPEN OCEAN</p><h2>One chick.<br><em>Years of devotion.</em></h2><div class="life-grid"><article><b>01</b><h3>Dance</h3><p>Young birds rehearse bows, calls, and bill-clapping before forming a pair.</p></article><article><b>02</b><h3>One egg</h3><p>Parents alternate incubation shifts while the other searches the ocean.</p></article><article><b>03</b><h3>Raise</h3><p>A chick remains at the colony for months while building reserves to fledge.</p></article><article><b>04</b><h3>Roam</h3><p>Juveniles can spend years at sea before returning to their birth region.</p></article></div></section>
+  </main>
+  <footer><a class="brand" href="#top"><span>↝</span><b>THE ALBATROSS ATLAS</b></a><p>Independent educational field guide · <a href="images/albatross/species/ATTRIBUTION.md">photo credits</a></p><p>22 SPECIES · ONE SHARED OCEAN</p></footer>
+</body>
+</html>

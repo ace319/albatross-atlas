@@ -1,0 +1,60 @@
+.blue {
+  display: inline-block;
+  padding: 6px 9px;
+  color: #fff !important;
+  background: var(--deep);
+}
+
+/* Prevent unstyled links from falling back to the browser's blue. */
+a,
+a:visited,
+header a,
+header a:visited,
+.species-index a,
+.species-index a:visited,
+.portrait-grid a,
+.portrait-grid a:visited,
+.earth-credit,
+footer a,
+footer a:visited {
+  color: #fff !important;
+}
+
+header .brand,
+header .brand:link,
+header .brand:visited,
+header .brand b,
+header nav a,
+header nav a:visited,
+.species-index a,
+.species-index a:link,
+.species-index a:visited,
+.portrait-grid a,
+.portrait-grid a:visited,
+.profile h3,
+.profile figcaption,
+.scientific,
+.profile p,
+.data span,
+.data strong,
+.heading > p,
+.species aside,
+.species aside b,
+footer .brand,
+footer .brand b,
+footer p,
+footer a {
+  color: #fff !important;
+}
+
+.button,
+.button:visited,
+.species-index a:hover,
+.species-index a:focus-visible {
+  color: var(--ink);
+}
+
+.skip,
+.skip:visited {
+  color: var(--ink);
+}
