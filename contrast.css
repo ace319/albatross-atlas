@@ -55,7 +55,7 @@ footer a {
 .button:visited,
 .species-index a:hover,
 .species-index a:focus-visible {
-  color: var(--ink);
+  color: var(--ink) !important;
 }
 
 .skip,
