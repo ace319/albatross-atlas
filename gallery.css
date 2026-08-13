@@ -1,3 +1,25 @@
+.hero-copy > .eyebrow {
+  margin: 0 0 30px;
+}
+
+.heading .eyebrow,
+.ocean .eyebrow {
+  margin: 0 0 24px;
+}
+
+.life > .eyebrow {
+  margin-bottom: 26px;
+}
+
+.dialog-number {
+  display: block;
+  margin-bottom: 32px;
+}
+
+.bird-dialog .dialog-info h2 {
+  margin-top: 0;
+}
+
 .hero .hero-species-button,
 .hero .hero-species-button:link,
 .hero .hero-species-button:visited,
