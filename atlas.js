@@ -23,7 +23,27 @@ const species=[
 ['Sooty Albatross','Phoebetria fusca','South Atlantic · Indian oceans','About 2.0 m','Uniformly sooty-brown with a pale eye-ring, slender wings, and diamond-shaped tail.']
 ];
 const slug=n=>n.toLowerCase().replace(/[’']/g,'').replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');
-const id=n=>`profile-${slug(n)}`;
-document.querySelector('#species-index').innerHTML=species.map((s,i)=>`<a href="#${id(s[0])}"><b>${String(i+1).padStart(2,'0')}</b>${s[0]}</a>`).join('');
-document.querySelector('#portrait-grid').innerHTML=species.map(s=>`<a href="#${id(s[0])}"><img src="images/albatross/species/${slug(s[0])}.jpg" alt="Adult ${s[0]}" loading="lazy"><span>${s[0]}</span></a>`).join('');
-document.querySelector('#profiles').innerHTML=species.map((s,i)=>`<article class="profile" id="${id(s[0])}"><span class="profile-number">${String(i+1).padStart(2,'0')}</span><figure><img src="images/albatross/species/${slug(s[0])}.jpg" alt="Adult ${s[0]}" loading="lazy"><figcaption>${s[0]}</figcaption></figure><div class="profile-info"><h3>${s[0]}</h3><em class="scientific">${s[1]}</em><div class="data"><div><span>Core range</span><strong>${s[2]}</strong></div><div><span>Wingspan</span><strong>${s[3]}</strong></div></div><p><b>Identification:</b> ${s[4]}</p><p>Like other albatrosses, this species uses long, narrow wings to harvest energy from ocean winds and returns to land primarily to breed.</p></div></article>`).join('');
+const gallery=document.querySelector('#portrait-grid');
+const dialog=document.querySelector('#bird-dialog');
+gallery.innerHTML=species.map((s,i)=>`<button class="bird-card" type="button" data-species="${i}" aria-label="Open information about the ${s[0]}"><img src="images/albatross/species/${slug(s[0])}.jpg" alt="Adult ${s[0]}" loading="lazy"><span>View bird ${String(i+1).padStart(2,'0')} <b>↗</b></span></button>`).join('');
+
+function openBird(index){
+  const bird=species[index];
+  document.querySelector('#bird-number').textContent=`Species ${String(index+1).padStart(2,'0')} of 22`;
+  document.querySelector('#bird-name').textContent=bird[0];
+  document.querySelector('#bird-scientific').textContent=bird[1];
+  document.querySelector('#bird-range').textContent=bird[2];
+  document.querySelector('#bird-wingspan').textContent=bird[3];
+  document.querySelector('#bird-identification').textContent=bird[4];
+  const photo=document.querySelector('#bird-photo');
+  photo.src=`images/albatross/species/${slug(bird[0])}.jpg`;
+  photo.alt=`Adult ${bird[0]}`;
+  dialog.showModal();
+}
+
+gallery.addEventListener('click',event=>{
+  const card=event.target.closest('.bird-card');
+  if(card)openBird(Number(card.dataset.species));
+});
+dialog.querySelector('.dialog-close').addEventListener('click',()=>dialog.close());
+dialog.addEventListener('click',event=>{if(event.target===dialog)dialog.close()});
