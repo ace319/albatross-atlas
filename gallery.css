@@ -1,3 +1,20 @@
+.hero .hero-species-button,
+.hero .hero-species-button:link,
+.hero .hero-species-button:visited,
+.hero .hero-species-button span,
+.hero .hero-species-button b {
+  color: #071c26 !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+.hero .hero-species-button span {
+  min-height: 0;
+  padding: 0;
+  background: transparent;
+  font: inherit;
+}
+
 .portrait-grid {
   grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 12px;
